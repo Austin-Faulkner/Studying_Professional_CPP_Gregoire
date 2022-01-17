@@ -16,6 +16,8 @@
 #include <cstring> // for  C-string methods
 #include <string>   // for std::string objects
 #include <charconv>  // to deal with low-level numeric conversions std::to_chars(), std::from_chars(), &c. See below for examples.
+#include <numbers>  // std::numbers::e, std::numbers::pi, std::numbers::sqrt2, std::numbers::phi, and many more
+#include <cmath>
 // TODO: deal with smart pointers in <memory>, unique_ptr<> ptr, shared_ptr<> sptr, &c.
 
 
@@ -371,9 +373,71 @@ int main(int argc, char** argv)
   // TODO: figure out why this is . . .
   //-------------------------------------------------------------------------------------------------
 
+  // Some objects from the <numbers> header
+  std::cout << std::format("std::numbers::e = {}", std::numbers::e) << std::endl;
+  std::cout << std::format("std::numbers::pi = {}", std::numbers::pi) << std::endl;
+  std::cout << std::format("std::numbers::phi (The Golden Ratio) = {}", std::numbers::phi) << std::endl;
+  std::cout << std::format("(sqrt(5) + 1) / 2 (Seen commonly in Nature and number theory) = {}", (sqrt(5) + 1) / 2) << std::endl;
+  std::cout << std::format("\u03C6 = (a + b) / a = a / b = {}", std::numbers::phi) << std::endl;
+  std::cout << std::format("std::numbers::sqrt2 = {}", std::numbers::sqrt2) << std::endl;
 
+  /*
+    Letter   Description  Escape-Sequence
+    -------------------------------------
+    A        Alpha        \u0391
+    B        Beta         \u0392
+    Γ        Gamma        \u0393
+    Δ        Delta        \u0394
+    Ε        Epsilon      \u0395
+    Ζ        Zeta         \u0396
+    Η        Eta          \u0397
+    Θ        Theta        \u0398
+    Ι        Iota         \u0399
+    Κ        Kappa        \u039A
+    Λ        Lambda       \u039B
+    Μ        Mu           \u039C
+    Ν        Nu           \u039D
+    Ξ        Xi           \u039E
+    Ο        Omicron      \u039F
+    Π        Pi           \u03A0
+    Ρ        Rho          \u03A1
+    Σ        Sigma        \u03A3
+    Τ        Tau          \u03A4
+    Υ        Upsilon      \u03A5
+    Φ        Phi          \u03A6
+    Χ        Chi          \u03A7
+    Ψ        Psi          \u03A8
+    Ω        Omega        \u03A9
 
+    Letter   Description  Escape-Sequence
+    -------------------------------------
+    α        Alpha        \u03B1
+    β        Beta         \u03B2
+    γ        Gamma        \u03B3
+    δ        Delta        \u03B4
+    ε        Epsilon      \u03B5
+    ζ        Zeta         \u03B6
+    η        Eta          \u03B7
+    θ        Theta        \u03B8
+    ι        Iota         \u03B9
+    κ        Kappa        \u03BA
+    λ        Lambda       \u03BB
+    μ        Mu           \u03BC
+    ν        Nu           \u03BD
+    ξ        Xi           \u03BE
+    ο        Omicron      \u03BF
+    π        Pi           \u03C0
+    ρ        Rho          \u03C1
+    σ        Sigma        \u03C3
+    τ        Tau          \u03C4
+    υ        Upsilon      \u03C5
+    φ        Phi          \u03C6
+    χ        Chi          \u03C7
+    ψ        Psi          \u03C8
+    ω        Omega        \u03C9
+  */
 
+  
 
 
   std::cout << "\n\n\n\n";
